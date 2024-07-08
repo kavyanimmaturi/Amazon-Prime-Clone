@@ -1,0 +1,137 @@
+@media screen and (min-width: 768px) {
+  .sm-devices {
+    display: none;
+  }
+}
+.lg-devices {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .lg-devices {
+    visibility: hidden;
+  }
+}
+
+.home-poster-name {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 46.91;
+  color: #ffffff;
+}
+.movies-details-overview {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.heading-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+}
+.home-details-btn {
+  background-color: #ffffff;
+  border-radius: 4px;
+  width: 76px;
+  height: 32px;
+  outline: none;
+  margin-top: 10px;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .home-poster-name {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 62px;
+  }
+  .movies-details-overview {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  .home-details-btn {
+    width: 74px;
+    height: 40px;
+  }
+  .home-banner-container {
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 800px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-banner-container {
+    min-height: 300px;
+    height: 380px;
+    max-height: 405px;
+  }
+}
+.home-header-container {
+  padding: 60px;
+}
+
+@media screen and (max-height: 768px) {
+  .home-header-container {
+    padding: 30px;
+  }
+}
+.home-banner-title {
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 62px;
+  color: #ffffff;
+}
+.home-banner-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: 0px;
+  color: #171f46;
+  font-weight: 600;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.home-banner-description {
+  margin-top: 5px;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  color: #ffffff;
+  width: 90%;
+}
+
+@media screen and (max-width: 767px) {
+  .home-banner-description {
+    width: 90%;
+    font-size: 12px;
+    margin-top: 3px;
+    line-height: 16px;
+  }
+  .home-banner-title {
+    font-size: 18px;
+    margin-bottom: 0px;
+    line-height: 50px;
+  }
+  .home-banner-button {
+    padding: 8px 8px;
+    font-size: 8px;
+  }
+}

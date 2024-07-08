@@ -1,0 +1,40 @@
+.slick-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:0px;
+}
+.slick-item {
+  background-color: transparent;
+  list-style-type:none;
+  margin:0px;
+}
+.slick-movie-img {
+  margin:5px;
+  height:120px;
+  width:120px;
+  border-radius: 10px;
+}
+@media screen and (min-width-567px) {
+  .slick-movie-img {
+    width: 120px;
+    height: 250px;
+  
+  }
+}
+@media screen and (min-width-768px) {
+  .slick-movie-img {
+    width: 120px;
+    height: 120px;
+    
+  }
+}
+@media screen and (min-width-1024px) {
+  .slick-movie-img {
+    width: 200px;
+    height: 200px;
+    
+    border-radius: 10px;
+  }
+}

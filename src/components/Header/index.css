@@ -1,0 +1,121 @@
+.navbar-bg-color {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 60px;
+  width: 100%;
+}
+.header-logo {
+  width: 80px;
+  height: 30px;
+}
+
+.navbar-container {
+  min-height: 75px;
+  padding: 15px;
+}
+.nav-elements-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-list-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .nav-list-items {
+    display: none;
+  }
+}
+.nav-items-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-logo {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .profile-logo {
+    display: block;
+    height: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+.menu-icon {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .profile-logo {
+    display: block;
+    color: #ffffff;
+    height: 28px;
+    margin-left: 10px;
+  }
+}
+.active {
+  color: #ffffff;
+  border-bottom: 2px solid rgb(9, 116, 210);
+  font-weight: 600;
+}
+.inactive {
+  color: #f8fafc;
+}
+.nav-link {
+  text-decoration: none;
+  outline: none;
+  list-style-type: none;
+  margin: 12px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.search {
+  size: 20px;
+  background-color: #131313;
+  border-width: 2px 1px 0.5px 1px;
+  border-color: grey;
+  margin-right: 8px;
+  width: 125px;
+  color: white;
+}
+.search-btn {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  margin-right: 10px;
+}
+.menu-icon {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.actions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (min-width:768px){
+  .profile-logo{
+    margin-right:10px;
+    visibility:visible;
+    margin-bottom:10px;
+  }
+  .navbar-bg-color{
+    padding-left:80px;
+    padding-right:80px;
+  }
+}

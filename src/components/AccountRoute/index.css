@@ -1,0 +1,88 @@
+.account-container {
+  background-color: #131313;
+}
+.account-details-container {
+  min-height: 70.7vh;
+  background-color: #e5e5e5;
+  padding: 30px 30px;
+}
+.account-heading {
+  color: #131313;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom:10px;
+}
+.membership-details-container {
+  padding: 15px 0px;
+  display: flex;
+}
+.separator {
+  border: 1px solid #cbd5e1;
+  background: #cbd5e1;
+  border-radius: 15px;
+}
+.membership-title {
+  color: #cbd5e1;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31.27px;
+  text-align: left;
+  margin-right: 10px;
+}
+.membership-email {
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31.27px;
+}
+.membership-password {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31.27px;
+  color: #64748b;
+}
+.membership-container {
+  display: flex;
+  padding: 10px;
+}
+.plan-details-title {
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.membership-plan-type {
+  color: #1e293b;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.plan-type {
+  font-size: 16px;
+  color: #1e293b;
+  width: Hug (79px);
+  height: Hug (27px);
+  top: 391px;
+  left: 443px;
+  padding: 2px 4px 2px 4px;
+  gap: 10px;
+  border-radius: 2px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #1e293b;
+}
+.account-logout-container{
+  display:flex;
+  justify-content:center;
+  margin-top:30px;
+  padding:20px;
+}
+.account-logout-btn{
+  border-radius:4px;
+  color: #FFFFFF;
+  padding:8px 20px;
+  background-color:#E50914;
+  outline:none;
+  cursor:pointer;
+  border:none;
+}
