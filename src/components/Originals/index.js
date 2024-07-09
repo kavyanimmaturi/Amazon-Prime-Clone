@@ -2,6 +2,7 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import SlickMovies from '../SlickMovies'
+import FailureView from '../FailureView'
 
 import './index.css'
 
@@ -26,7 +27,7 @@ class Originals extends Component {
     this.setState({apiStatus: apiStatusConstants.in_progress})
 
     const jwtToken = Cookies.get('jwt_token')
-    const url = 'https://apis.ccbp.in/movies-app/originals'
+    const url = `https://apis.ccbp.in/movies-app/originals`
     const options = {
       method: 'GET',
       headers: {
@@ -47,7 +48,7 @@ class Originals extends Component {
         orignalVideos: updatedData,
       })
     } else {
-      this.setState({apiStatus: apiStatusConstants.success})
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
@@ -67,19 +68,7 @@ class Originals extends Component {
     this.getOriginals()
   }
 
-  renderFailureView = () => (
-    <div className="failure-view-container">
-      <img
-        src="https://res.cloudinary.com/dtv22dsxc/image/upload/v1719931209/alert-triangle_hcjs5d.png"
-        alt="failure view"
-        className="failure-view"
-      />
-      <p className="failure-title">Something went wrong, Please try again</p>
-      <button type="button" onClick={this.onRetry}>
-        Try Again
-      </button>
-    </div>
-  )
+  renderFailureView = () => <FailureView onRetry={this.onRetry} />
 
   renderOriginals = () => {
     const {apiStatus} = this.state

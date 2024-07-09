@@ -62,14 +62,8 @@ class PopularRoute extends Component {
   renderFailureView = () => <FailureView onRetry={this.onRetry} />
 
   renderLoadingView = () => (
-    <div className="loader-container">
-      <Loader
-        type="TailSpin"
-        testid="loader"
-        color="#D81F26"
-        height={25}
-        width={30}
-      />
+    <div className="loader-container" testid="loader">
+      <Loader type="TailSpin" color="#D81F26" height={25} width={30} />
     </div>
   )
 

@@ -108,14 +108,14 @@
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (min-width:768px){
-  .profile-logo{
-    margin-right:10px;
-    visibility:visible;
-    margin-bottom:10px;
+@media screen and (min-width: 768px) {
+  .profile-logo {
+    margin-right: 10px;
+    visibility: visible;
+    margin-bottom: 10px;
   }
-  .navbar-bg-color{
-    padding-left:80px;
-    padding-right:80px;
+  .navbar-bg-color {
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }

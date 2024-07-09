@@ -35,7 +35,7 @@
 }
 @media screen and (min-width: 768px) {
   .popular-movies-list {
-     padding: 10px;
+    padding: 10px;
   }
   .popular-movie-poster {
     height: 250px;

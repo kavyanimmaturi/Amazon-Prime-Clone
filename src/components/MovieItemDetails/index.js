@@ -149,9 +149,9 @@ class MovieItemDetails extends Component {
         <div className="additional-movie-details-container additional-details-sm-container">
           <ul className="genres-list-container">
             <h1 className="movie-details-genre-heading">Genres</h1>
-            {genres.map(eachGenrer => (
-              <li className="movie-details-each-genre" key={eachGenrer.id}>
-                {eachGenrer.name}
+            {genres.map(eachGenre => (
+              <li className="movie-details-each-genre" key={eachGenre.id}>
+                {eachGenre.name}
               </li>
             ))}
           </ul>

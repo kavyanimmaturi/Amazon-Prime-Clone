@@ -10,7 +10,7 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  border:none;
+  border: none;
 }
 .banner-button {
   padding-left: 10px;
@@ -60,7 +60,7 @@
   font-size: 24px;
   padding: 30px;
 }
-.originals-heading{
+.originals-heading {
   color: #ffffff;
   font-weight: 600;
   line-height: 31px;

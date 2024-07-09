@@ -1,0 +1,19 @@
+.video-details-view-container {
+  background-color: #0f0f0f;
+  overflow-y: auto;
+}
+.movie-details-container {
+  width: 1440px;
+  height: 501px;
+}
+.additional-movie-details-container {
+  background-color: #131313;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+}
+.genres-list-container{
+  margin:0;
+  padding:0;
+}

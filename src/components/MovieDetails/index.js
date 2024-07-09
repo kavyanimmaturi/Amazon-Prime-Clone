@@ -26,7 +26,6 @@ const MovieDetails = props => {
           backgroundSize: '100% 100%',
           width: '400px',
           height: '500px',
-          margin: '10px',
         }}
       >
         <div className="movie-info-details-sm-devices heading-container">

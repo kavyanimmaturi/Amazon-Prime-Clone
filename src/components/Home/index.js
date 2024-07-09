@@ -68,14 +68,8 @@ class Home extends Component {
   renderFailureView = () => <FailureView onRetry={this.onRetry} />
 
   renderLoadingView = () => (
-    <div className="loader-container">
-      <Loader
-        type="TailSpin"
-        testid="loader"
-        height={60}
-        width={80}
-        color="#d62013"
-      />
+    <div className="loader-container" testid="loader">
+      <Loader type="TailSpin" height={60} width={80} color="#d62013" />
     </div>
   )
 

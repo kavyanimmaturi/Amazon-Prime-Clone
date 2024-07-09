@@ -94,23 +94,25 @@ class SearchRoute extends Component {
     return (
       <>
         {searchMovies.length > 0 ? (
-          <div className="search-results-bg-container">
-            <div className="search-movies-filter-list-container">
-              <ul className="search-results-container">
-                {searchMovies.map(each => (
-                  <Link to={`/movies/${each.id}`} key={each.id}>
-                    <li className="search-results-list-items" key={each.id}>
-                      <img
-                        src={each.posterPath}
-                        alt={each.title}
-                        className="search-results-poster"
-                      />
-                    </li>
-                  </Link>
-                ))}
-              </ul>
+          <>
+            <div className="search-results-bg-container">
+              <div className="search-movies-filter-list-container">
+                <ul className="search-results-container">
+                  {searchMovies.map(each => (
+                    <Link to={`/movies/${each.id}`} key={each.id}>
+                      <li className="search-results-list-items" key={each.id}>
+                        <img
+                          src={each.posterPath}
+                          alt={each.title}
+                          className="search-results-poster"
+                        />
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          </>
         ) : (
           this.renderNotFoundMovies()
         )}
@@ -137,16 +139,16 @@ class SearchRoute extends Component {
     )
   }
 
-  renderSearchView = () => {
+  renderSearchMovies = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
       case apiStatusConstants.success:
         return this.renderSuccessView()
-      case apiStatusConstants.in_progress:
-        return this.renderLoadingView()
       case apiStatusConstants.failure:
         return this.renderFailureView()
+      case apiStatusConstants.in_progress:
+        return this.renderLoadingView()
       default:
         return null
     }
@@ -156,7 +158,7 @@ class SearchRoute extends Component {
     return (
       <div className="search-results-bg-container">
         <Header searchInput={this.searchInput} />
-        <div>{this.renderSearchView()}</div>
+        <div>{this.renderSearchMovies()}</div>
         <FooterSection />
       </div>
     )

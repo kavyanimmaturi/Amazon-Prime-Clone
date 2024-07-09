@@ -11,7 +11,7 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 .membership-details-container {
   padding: 15px 0px;
@@ -71,18 +71,18 @@
   opacity: 0px;
   border: 1px solid #1e293b;
 }
-.account-logout-container{
-  display:flex;
-  justify-content:center;
-  margin-top:30px;
-  padding:20px;
+.account-logout-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 20px;
 }
-.account-logout-btn{
-  border-radius:4px;
-  color: #FFFFFF;
-  padding:8px 20px;
-  background-color:#E50914;
-  outline:none;
-  cursor:pointer;
-  border:none;
+.account-logout-btn {
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 8px 20px;
+  background-color: #e50914;
+  outline: none;
+  cursor: pointer;
+  border: none;
 }
