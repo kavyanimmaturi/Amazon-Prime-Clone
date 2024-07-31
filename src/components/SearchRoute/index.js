@@ -13,7 +13,7 @@ import './index.css'
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
-  in_progress: 'IN_PROGRESS',
+  inProgress: 'IN_PROGRESS',
   failure: 'FAILURE',
 }
 
@@ -66,7 +66,7 @@ class SearchRoute extends Component {
 
   renderLoadingView = () => (
     <div className="loader-container" testid="loader">
-      <Loader type="TailSpin" color="#D81F26" height={80} width={80} />
+      <Loader type="TailSpin" color="#D81F26" height={35} width={380} />
     </div>
   )
 
@@ -147,7 +147,7 @@ class SearchRoute extends Component {
         return this.renderSuccessView()
       case apiStatusConstants.failure:
         return this.renderFailureView()
-      case apiStatusConstants.in_progress:
+      case apiStatusConstants.inProgress:
         return this.renderLoadingView()
       default:
         return null

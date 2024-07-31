@@ -63,60 +63,60 @@ class Header extends Component {
     }
 
     return (
-      <nav className='navbar-container'>
-        <div className='nav-elements-container'>
-          <Link to='/'>
+      <nav className="navbar-container">
+        <div className="nav-elements-container">
+          <Link to="/">
             <img
-              src='https://res.cloudinary.com/dtv22dsxc/image/upload/v1719125947/Group_7399_tgj3eh.png'
-              alt='website logo'
-              className='header-logo'
+              src="https://res.cloudinary.com/dtv22dsxc/image/upload/v1719125947/Group_7399_tgj3eh.png"
+              alt="website logo"
+              className="header-logo"
             />
           </Link>
-          <ul className='nav-list-items'>
-            <Link to='/' className='nav-link'>
+          <ul className="nav-list-items">
+            <Link to="/" className="nav-link">
               <li className={`nav-heading ${homeMenuTab}`}>Home</li>
             </Link>
 
-            <Link to='/popular' className='nav-link'>
+            <Link to="/popular" className="nav-link">
               <li className={`nav-heading ${popularMenuTab}`}>Popular</li>
             </Link>
           </ul>
 
-          <div className='search-container'>
+          <div className="search-container">
             {showSearchBar && (
               <input
-                type='search'
+                type="search"
                 onKeyDown={this.onChangeSearchInput}
-                placeholder='Search'
-                className='search'
+                placeholder="search"
+                className="search"
               />
             )}
-            <Link to='/search'>
+            <Link to="/search">
               <button
-                type='button'
-                className='search-btn'
-                testid='searchButton'
+                type="button"
+                className="search-btn"
+                testid="searchButton"
               >
                 <HiOutlineSearch
                   size={20}
-                  color='#ffffff'
-                  testid='searchButton'
+                  color="#ffffff"
+                  testid="searchButton"
                   onClick={this.onClickSearchIcon}
                 />
               </button>
             </Link>
 
-            <Link to='/account'>
+            <Link to="/account">
               <img
-                src='https://res.cloudinary.com/dtv22dsxc/image/upload/v1719133614/Avatar_bjthok.png'
-                alt='profile'
+                src="https://res.cloudinary.com/dtv22dsxc/image/upload/v1719133614/Avatar_bjthok.png"
+                alt="profile"
                 className={`profile-logo ${accountMenuTab}`}
               />
             </Link>
             <MdMenuOpen
               size={25}
-              color='#ffffff'
-              className='menu-icon'
+              color="#ffffff"
+              className="menu-icon"
               onClick={this.onClickShowMenu}
             />
           </div>
@@ -124,22 +124,22 @@ class Header extends Component {
 
         {showMenu && (
           <div>
-            <ul className='nav-items-list'>
-              <Link to='/' className='nav-link'>
+            <ul className="nav-items-list">
+              <Link to="/" className="nav-link">
                 <li className={`popup-heading ${homeMenuTab}`}>Home</li>
               </Link>
 
-              <Link to='/popular' className='nav-link'>
+              <Link to="/popular" className="nav-link">
                 <li className={`popup-heading ${popularMenuTab}`}>Popular</li>
               </Link>
 
-              <Link to='/account' className='nav-link'>
+              <Link to="/account" className="nav-link">
                 <li className={`popup-heading ${accountMenuTab}`}>Account</li>
               </Link>
               <ImCross
                 size={24}
-                color='#ffffff'
-                className='close-icon'
+                color="#ffffff"
+                className="close-icon"
                 onClick={this.onClickHideMenu}
               />
             </ul>

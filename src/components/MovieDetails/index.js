@@ -24,14 +24,13 @@ const MovieDetails = props => {
         style={{
           backgroundImage: `url(${posterPath})`,
           backgroundSize: '100% 100%',
-          width: '400px',
-          height: '500px',
+          height: '100%',
         }}
       >
         <div className="movie-info-details-sm-devices heading-container">
           <h1 className="movie-title">{title}</h1>
           <div className="movie-runtime-container">
-            <p className="movie-runtime-in-hrs-mins">{`${hours}h${minutes}m`}</p>
+            <p className="movie-runtime-in-hrs-mins">{`${hours}h ${minutes}m`}</p>
             <p className="movie-info-adult-a">{adult ? 'A' : 'U/A'}</p>
             <p className="movie-release-year">{year}</p>
           </div>

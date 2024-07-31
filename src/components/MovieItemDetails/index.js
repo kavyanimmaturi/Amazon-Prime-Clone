@@ -13,7 +13,7 @@ const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
   failure: 'FAILURE',
-  in_progress: 'IN_PROGRESS',
+  inProgress: 'IN_PROGRESS',
 }
 
 class MovieItemDetails extends Component {
@@ -30,7 +30,7 @@ class MovieItemDetails extends Component {
   }
 
   getMovieDetails = async () => {
-    this.setState({apiStatus: apiStatusConstants.in_progress})
+    this.setState({apiStatus: apiStatusConstants.inProgress})
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -77,8 +77,8 @@ class MovieItemDetails extends Component {
       )
 
       this.setState({
-        apiStatus: apiStatusConstants.success,
         movieDetails: updatedData,
+        apiStatus: apiStatusConstants.success,
         genres: updatedGenresData,
         languagesAvailable: updatedLanguagesData,
         similarMovies: updatedSimilarData.slice(0, 6),
@@ -95,7 +95,7 @@ class MovieItemDetails extends Component {
   renderFailureView = () => <FailureView onRetry={this.onRetry} />
 
   renderLoadingView = () => (
-    <div classNae="loader-container" testid="loader">
+    <div className="loader-container" testid="loader">
       <Loader type="TailSpin" height={80} width={80} color="#D81F26" />
     </div>
   )
@@ -148,7 +148,7 @@ class MovieItemDetails extends Component {
 
         <div className="additional-movie-details-container additional-details-sm-container">
           <ul className="genres-list-container">
-            <h1 className="movie-details-genre-heading">Genres</h1>
+            <h1 className="movie-details-genre-heading">genres</h1>
             {genres.map(eachGenre => (
               <li className="movie-details-each-genre" key={eachGenre.id}>
                 {eachGenre.name}
@@ -176,7 +176,7 @@ class MovieItemDetails extends Component {
             <h1 className="movie-details-budget-heading">Budget</h1>
             <p className="movie-details-budget">{budget}</p>
             <h1 className="movie-details-release-date">Release Date</h1>
-            <p classNae="movie-details.release-year">{releaseDate}</p>
+            <p className="movie-details.release-year">{releaseDate}</p>
             <p>
               <span className="movie-info-date">{day}</span>
               <span className="movie-info-date-end">{dateEndingWord}</span>
@@ -214,7 +214,7 @@ class MovieItemDetails extends Component {
         return this.renderSuccessView()
       case apiStatusConstants.failure:
         return this.renderFailureView()
-      case apiStatusConstants.in_progress:
+      case apiStatusConstants.inProgress:
         return this.renderLoadingView()
       default:
         return null

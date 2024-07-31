@@ -14,8 +14,8 @@ import './index.css'
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
-  in_progress: 'IN_PROGRESS',
   failure: 'FAILURE',
+  inProgress: 'IN_PROGRESS',
 }
 
 class Home extends Component {
@@ -29,7 +29,7 @@ class Home extends Component {
   }
 
   getHomePagePoster = async () => {
-    this.setState({apiStatus: apiStatusConstants.in_progress})
+    this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
     const url = `https://apis.ccbp.in/movies-app/originals`
     const options = {
@@ -53,8 +53,8 @@ class Home extends Component {
         posterPath: randomPoster.poster_path,
       }
       this.setState({
-        apiStatus: apiStatusConstants.success,
         initialPoster: {...updatedData},
+        apiStatus: apiStatusConstants.success,
       })
     } else {
       this.setState({apiStatus: apiStatusConstants.failure})
@@ -91,7 +91,7 @@ class Home extends Component {
         return this.renderSuccessView()
       case apiStatusConstants.failure:
         return this.renderFailureView()
-      case apiStatusConstants.in_progress:
+      case apiStatusConstants.inProgress:
         return this.renderLoadingView()
       default:
         return null
@@ -113,8 +113,8 @@ class Home extends Component {
             <h1 className="originals-heading">Originals</h1>
             <Originals />
           </div>
-          <FooterSection />
         </div>
+        <FooterSection />
       </div>
     )
   }
