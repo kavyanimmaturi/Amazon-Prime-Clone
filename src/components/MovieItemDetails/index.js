@@ -95,8 +95,8 @@ class MovieItemDetails extends Component {
   renderFailureView = () => <FailureView onRetry={this.onRetry} />
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="loader">
-      <Loader type="TailSpin" height={80} width={80} color="#D81F26" />
+    <div className='loader-container' testid='loader'>
+      <Loader type='TailSpin' height={80} width={80} color='#D81F26' />
     </div>
   )
 
@@ -138,62 +138,62 @@ class MovieItemDetails extends Component {
 
     return (
       <>
-        <div className="movie-details-container">
-          <div className="movie-details-card">
+        <div className='movie-details-container'>
+          <div className='movie-details-card'>
             {movieDetails.map(each => (
               <MovieDetails movieDetails={each} key={each.id} />
             ))}
           </div>
         </div>
 
-        <div className="additional-movie-details-container additional-details-sm-container">
-          <ul className="genres-list-container">
-            <h1 className="movie-details-genre-heading">genres</h1>
+        <div className='additional-movie-details-container additional-details-sm-container'>
+          <ul className='genres-list-container'>
+            <h1 className='movie-details-genre-heading'>genres</h1>
             {genres.map(eachGenre => (
-              <li className="movie-details-each-genre" key={eachGenre.id}>
+              <li className='movie-details-each-genre' key={eachGenre.id}>
                 {eachGenre.name}
               </li>
             ))}
           </ul>
 
-          <ul className="genres-list-container">
-            <h1 className="movie-details-languages-heading">Audio Available</h1>
+          <ul className='genres-list-container'>
+            <h1 className='movie-details-languages-heading'>Audio Available</h1>
             {languagesAvailable.map(eachAudio => (
-              <li className="movie-details-each-genre" key={eachAudio.id}>
+              <li className='movie-details-each-genre' key={eachAudio.id}>
                 {eachAudio.language}
               </li>
             ))}
           </ul>
 
-          <div className="genres-list-container">
-            <h1 className="movie-details-rating-count-heading">Rating Count</h1>
-            <p className="movie-details-rating-count">{count}</p>
-            <h1 className="movie-details-rating-avg-title">Rating Average</h1>
-            <p className="movie-details-rating">{rating}</p>
+          <div className='genres-list-container'>
+            <h1 className='movie-details-rating-count-heading'>Rating Count</h1>
+            <p className='movie-details-rating-count'>{count}</p>
+            <h1 className='movie-details-rating-avg-title'>Rating Average</h1>
+            <p className='movie-details-rating'>{rating}</p>
           </div>
 
-          <div className="genres-list-container">
-            <h1 className="movie-details-budget-heading">Budget</h1>
-            <p className="movie-details-budget">{budget}</p>
-            <h1 className="movie-details-release-date">Release Date</h1>
-            <p className="movie-details.release-year">{releaseDate}</p>
+          <div className='genres-list-container'>
+            <h1 className='movie-details-budget-heading'>Budget</h1>
+            <p className='movie-details-budget'>{budget}</p>
+            <h1 className='movie-details-release-date'>Release Date</h1>
+            <p className='movie-details.release-year'>{releaseDate}</p>
             <p>
-              <span className="movie-info-date">{day}</span>
-              <span className="movie-info-date-end">{dateEndingWord}</span>
-              <span className="movie-info-month-name">{monthName}</span>
-              <span className="movie-info-year">{year}</span>
+              <span className='movie-info-date'>{day}</span>
+              <span className='movie-info-date-end'>{dateEndingWord}</span>
+              <span className='movie-info-month-name'>{monthName}</span>
+              <span className='movie-info-year'>{year}</span>
             </p>
           </div>
         </div>
 
-        <div className="similar-movies-container">
-          <h1 className="more-like-this">More like this</h1>
-          <ul className="popular-ul-container similar-ul-container">
+        <div className='similar-movies-container'>
+          <h1 className='more-like-this'>More like this</h1>
+          <ul className='popular-ul-container similar-ul-container'>
             {similarMovies.map(each => (
-              <Link to={`/movies/${each.id}`} key={each.id} target="blank">
-                <li className="popular-list-item" key={each.id}>
+              <Link to={`/movies/${each.id}`} key={each.id} target='blank'>
+                <li className='popular-list-item' key={each.id}>
                   <img
-                    className="popular-images"
+                    className='popular-images'
                     src={each.posterPath}
                     alt={each.title}
                   />
@@ -223,12 +223,12 @@ class MovieItemDetails extends Component {
 
   render() {
     return (
-      <div className="movie-item-container">
+      <div className='movie-item-container'>
         <Header />
-        <div className="root-container">
+        <div className='root-container'>
           <div
-            className="video-details-view-container"
-            data-testid="videoItemDetails"
+            className='video-details-view-container'
+            data-testid='videoItemDetails'
           >
             {this.renderVideoDetailView()}
             <FooterSection />
